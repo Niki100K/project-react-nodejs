@@ -1,0 +1,80 @@
+.dropzone {
+    width: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--white1);
+}
+
+.dropzone p {
+    margin: 0;
+}
+.dropzone.active {
+    border-color: #6c6;
+}
+
+
+.AddImage .photos {
+    padding: .5rem;
+}
+.AddImage .photos .img {
+    position: relative;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    opacity: .7;
+}
+.AddImage .photos .img:hover {
+    opacity: 1;
+}
+.AddImage .photos .img .remove {
+    position: absolute;
+    display: none;
+    width: unset;
+    top: .5rem;
+    right: .5rem;
+    border: 2px solid var(--white1);
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: var(--light3);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.AddImage .photos .img:hover .remove {
+    display: flex;
+}
+.AddImage .photos .img .input {
+    padding: .5rem;
+}
+.AddImage .photos .img input {
+    font-size: 1rem;
+    padding: 4px .5rem;
+}
+.AddImage .photos .img input::placeholder {
+    letter-spacing: 1px;
+    font-family: var(--font2);
+    color: var(--white4);
+}
+.AddImage .photos button {
+    width: 100%;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    padding: .5rem;
+    background: var(--light2);
+    font-family: var(--font4);
+}
+.AddImage button.return {
+    width: 100%;
+    padding: .5rem;
+    opacity: .7;
+    background: var(--light3);
+    font-family: var(--font4);
+}
+.AddImage button.return:hover {
+    opacity: 1;
+}

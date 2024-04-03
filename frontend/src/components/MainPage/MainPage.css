@@ -1,0 +1,185 @@
+.MainPage {
+    padding: 4% .5rem;
+    align-items: flex-start !important;
+}
+.MainPage .filter {
+    position: sticky;
+    top: 2rem;
+    max-width: 320px;
+    margin-right: .5rem;
+    border-radius: 1rem;
+    padding: 1rem .5rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    background: var(--middle1);
+}
+.MainPage .filter h2 {
+    color: var(--white1);
+    font-family: var(--font4);
+}
+.MainPage .filter input {
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    padding: 4px 1.5rem;
+    border: 2px solid var(--dark1);
+    color: var(--light4);
+}
+.MainPage .filter input:focus {
+    border: 2px solid var(--light2);
+}
+.MainPage .filter label {
+    position: absolute;
+    width: unset;
+    left: 2rem;
+    font-size: 2rem;
+    font-family: var(--font4);
+    color: var(--light4);
+}
+.MainPage .filter input:focus + label,
+.MainPage .filter input:not(:placeholder-shown) + label {
+    display: none;
+}
+.MainPage .filter .btn button {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    background: var(--light2);
+    font-family: var(--font4);
+}
+.MainPage .filter .btn button:nth-child(1) {
+    opacity: .7;
+}
+.MainPage .filter .btn button:nth-child(1):hover {
+    opacity: 1;
+}
+.MainPage .filter .btn button:nth-child(2) {
+    background: transparent;
+    border: 2px solid var(--light4);
+    color: var(--light4);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.MainPage .filter .btn button:nth-child(2):hover {
+    background: var(--light4);
+    color: var(--white1);
+}
+.MainPage .filter strong {
+    width: 100%;
+    text-align: center;
+    padding: .5rem;
+    background: var(--light2);
+    margin: .5rem 0;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+.MainPage .filter dfn {
+    color: var(--light3);
+}
+
+.MainPage .images {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.MainPage .images .img {
+    position: relative;
+    max-width: 33%;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    padding: 1rem .5rem;
+    opacity: .7;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.MainPage .images .img:hover {
+    opacity: 1;
+}
+.MainPage .images .img h3 {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    margin: .5rem;
+    padding: 4px .5rem;
+    border-radius: .5rem;
+    background: var(--light2);
+    font-family: var(--font4);
+    color: var(--middle2);
+}
+.MainPage .images .img:hover h3 {
+    display: flex;
+    animation: show-title .4s both;
+}
+@keyframes show-title {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.MainPage .images .img p {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    margin: .5rem;
+    color: var(--white1);
+    font-family: var(--font2);
+}
+.MainPage .images .img:hover p {
+    display: flex;
+    animation: show-description .4s both;
+} 
+@keyframes show-description {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0%);}
+}
+
+.MainPage .images .img .circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    width: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--light3);
+}
+
+
+@media (max-width: 1300px) {
+    .MainPage .images .img p {
+        display: none !important;
+    }
+}
+@media (max-width: 980px) {
+    .MainPage .filter {
+        max-width: 240px;
+    }
+    .MainPage .filter input {
+        font-size: 1rem;
+        padding: 4px .5rem;
+    }
+    .MainPage .filter label {
+        font-size: 1.5rem;
+        left: 1rem;
+    }
+    .MainPage .images .img h3 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 780px) {
+    .MainPage {
+        flex-direction: column;
+    }
+    .MainPage .filter {
+        position: relative;
+        top: unset;
+        margin-bottom: 1rem;
+    }
+    .MainPage .images .img {
+        max-width: 49%;
+    }
+}
+@media (max-width: 520px) {
+    .MainPage .images .img {
+        max-width: unset;
+    }
+}
